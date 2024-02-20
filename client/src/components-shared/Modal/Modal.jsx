@@ -14,23 +14,29 @@ const Modal = ({ showModal, closeModal, onConfirm }) => {
 
   return (
     <div className={`${showModal ? clsx(style.show) : clsx(style.wrapper)}`}>
-      <div>
-        <div>
-          <span classNAme={clsx(style.close)} onClick={closeModal}>
-            &times;
-          </span>
-          <h2>Enter Project Name</h2>
+      <div className="w-screen h-screen absolute top-0 flex bg-black/40 justify-center items-center">
+        <div className="w-[40vw] bg-black/70 p-6 rounded-md">
+          <h2 className="text-white font-bold text-3xl my-4">
+            Enter Project Name
+          </h2>
           <input
             type="text"
+            className="w-full p-4"
             placeholder="Project Name"
             value={projectName}
             onChange={(e) => setProjectName(e.target.value)}
           />
-          <div className="button-container">
-            <button className="confirm-btn" onClick={handleConfirm}>
+          <div className="button-container mt-4 flex justify-evenly">
+            <button
+              className="confirm-btn bg-green-600 w-24 h-12 rounded-md text-white"
+              onClick={handleConfirm}
+            >
               Next
             </button>
-            <button className="cancel-btn" onClick={closeModal}>
+            <button
+              className="cancel-btn bg-gray-400 w-24 h-12 rounded-md text-white"
+              onClick={closeModal}
+            >
               Cancel
             </button>
           </div>

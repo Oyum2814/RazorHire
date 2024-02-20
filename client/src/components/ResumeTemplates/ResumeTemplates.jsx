@@ -49,12 +49,12 @@ export default function ResumeTemplates() {
     setShowModal(false);
   };
   return (
-    <div className={clsx(style.wrapper, "withPadding")}>
+    <div className={clsx(style.wrapper)}>
       <h2> Templates</h2>
-      <div className={clsx(style.templates, "withPadding")}>
+      <div className={clsx(style.templates)}>
         {templates.map((template) => (
           <div
-            className={clsx(style.template, "withPadding")}
+            className={clsx(style.template)}
             onClick={() => {
               setProjectId(template?._id);
               openModal();

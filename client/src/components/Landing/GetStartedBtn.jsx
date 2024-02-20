@@ -5,11 +5,11 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 
 export default function GetStartedBtn() {
   return (
-    <button className={style.wrapper}>
+    <a href={"/dashboard"} className={style.wrapper}>
       Get Started for Free
       <span>
         <MdKeyboardArrowRight size={25} />
       </span>
-    </button>
+    </a>
   );
 }

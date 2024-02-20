@@ -5,6 +5,8 @@
     min-height: 80vh;
     h2{
         text-align: center;
+        font-size: 1.5em;
+        font-weight:700;
     }
     a{
         font-size: 16px;
@@ -23,6 +25,7 @@
         background:rgb(0, 0, 195)!important;
     }
     .templates{
+        margin-top: 2rem;
         width:80vw;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -35,8 +38,11 @@
         padding: 10px 0;
         font-size: 16px;
         border-radius: 9px;
+        height:15vw;
+        width:15vw;
+        overflow: hidden;
     }
     .template:hover{
-        background:rgb(222, 222, 222);
+        border:black 1px solid;
     }
 }

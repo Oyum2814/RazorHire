@@ -126,7 +126,7 @@ const PDFViewer = ({
         {!loading && (
           <a
             className="download-btn -mt-[24%] md:-mt-[12%] 
-          text-white bg-[#6a2c70] px-4 py-2 font-bold w-[50vw] md:w-[20vw] rounded-md text-center  md:mb-0"
+          text-white bg-[#2846bd] px-4 py-2 font-bold w-[50vw] md:w-[20vw] rounded-md text-center  md:mb-0"
             href={pdfUrl}
             download="generated_pdf.pdf"
           >
