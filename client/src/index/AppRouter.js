@@ -13,8 +13,7 @@ export default function AppRouter() {
   return (
     <Suspense fallback={<Preloader />}>
       <Routes>
-        <Route path="/" element={<Navigate to={Routes.Home} />} />
-
+        {/* <Route path="/" element={<Navigate to={Routes.Home} />} /> */}
         <Route path={routes.Login} element={<Login />} />
         <Route path={routes.Home} element={<Landing />} />
         <Route path={routes.Dashboard} element={<Dashboard />} />

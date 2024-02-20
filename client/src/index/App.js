@@ -4,12 +4,15 @@ import "react-toastify/dist/ReactToastify.min.css";
 import { BrowserRouter } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { ErrorBoundary } from "react-error-boundary";
-
-import AppRouter from "./AppRouter";
+import React, { useEffect } from "react";
 import Navbar from "components-layout/Navbar";
 
 import { AppContextProvider } from "contexts/AppContext";
 import Footer from "components-layout/Footer/Footer";
+
+import { useDispatch } from "react-redux";
+import { fetchUserDetails } from "../redux/userActions";
+import AppRouter from "./AppRouter";
 
 function AppWrapper() {
   return (
@@ -41,6 +44,11 @@ function AppWrapper() {
 }
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchUserDetails());
+  }, [dispatch]);
   return (
     <ErrorBoundary
       fallback={
