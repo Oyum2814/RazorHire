@@ -1,0 +1,54 @@
+@import "~utils/vars";
+
+.wrapper {
+  padding-top: 5em;
+  padding-bottom: 2em;
+  background-color: #fbfbfb;
+
+  min-height: 80vh;
+
+  .greetings {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 3em;
+  }
+
+  h4 {
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .types {
+    display: flex;
+    justify-content: space-between;
+
+    article {
+      background: #ffffff;
+      box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.08);
+      border-radius: 10px;
+      height: 12.5em;
+      width: 15em;
+      cursor: pointer;
+
+      border: 3px solid transparent;
+
+      &:hover {
+        border-color: $secondaryColor;
+        transition: all 0.5s;
+      }
+
+      .image {
+        margin-bottom: 0.5em;
+        display: flex;
+        justify-content: center;
+      }
+
+      .body {
+        text-align: center;
+        padding: 1em;
+        color: #2f2f2f;
+      }
+    }
+  }
+}

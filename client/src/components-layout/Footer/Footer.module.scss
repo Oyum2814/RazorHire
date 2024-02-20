@@ -1,0 +1,46 @@
+@import "~utils/vars";
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-block: 4em;
+  background-color: $secondaryColor;
+  color: white;
+
+  > div {
+    width: calc(100% / 3);
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-evenly;
+
+    .linksCol {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .title {
+        margin-bottom: 0.5em;
+        font-weight: 600;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        span {
+          margin-bottom: 0.1em;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    color: #a5a5a5;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

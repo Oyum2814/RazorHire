@@ -1,0 +1,148 @@
+@import "~utils/vars";
+
+.wrapper {
+  .caption {
+    color: #2f2f2f;
+  }
+
+  .subCaption {
+    color: #999999;
+  }
+
+  section.hero {
+    padding-top: 6em;
+    padding-bottom: 7em;
+
+    .bgRight,
+    .bgLeft {
+      position: absolute;
+      z-index: -1;
+    }
+
+    .bgLeft {
+      left: 0;
+      top: 8em;
+    }
+
+    .bgRight {
+      right: 0;
+      top: -$navbarHeight;
+    }
+
+    .intro {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 5em;
+
+      .textBox {
+        .title {
+          font-size: 2.5rem;
+          width: 15ch;
+          line-height: 40px;
+          font-weight: 600;
+          margin-bottom: 0.5em;
+        }
+
+        .subtitle {
+          margin-bottom: 1.5em;
+        }
+      }
+    }
+
+    .clientelle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      .caption {
+        margin-bottom: 0.5em;
+      }
+
+      .subCaption {
+        margin-bottom: 1em;
+      }
+    }
+  }
+
+  .featuresSection,
+  .premiumSection {
+    padding-bottom: 4em;
+
+    .caption {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 2em;
+
+      p {
+        text-align: center;
+        font-size: 1.5rem;
+        max-width: 30ch;
+        font-weight: 500;
+        line-height: 27px;
+      }
+    }
+
+    article {
+      .title {
+        color: $secondaryColor;
+        font-weight: 500;
+      }
+
+      .body {
+        color: #555555;
+        font-size: 0.9rem;
+      }
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+section.featuresSection {
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    gap: 2em 2em;
+    margin-bottom: 2em;
+
+    article {
+      display: flex;
+      max-width: 400px;
+
+      .image {
+        padding-right: 1.5em;
+      }
+    }
+  }
+}
+
+section.premiumSection {
+  .premiums {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -2em;
+    margin-bottom: 3em;
+
+    article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      max-width: 16em;
+
+      .body {
+        text-align: center;
+        padding-top: 0.2em;
+        padding-inline: 10px;
+      }
+    }
+  }
+}

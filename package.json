@@ -1,0 +1,21 @@
+{
+    "name": "storybooks",
+    "version": "1.0.0",
+    "description": "App for creating public and private stories",
+    "main": "index.js",
+    "scripts": {
+        "frontend": "cd client && npm start",
+        "backend":"cd server && npm run dev",
+        "dev":"concurrently \"npm run frontend\" \"npm run backend\""
+    },
+    "author": "Brad Traversy",
+    "license": "MIT",
+    "dependencies": {
+     
+    },
+    "devDependencies": {
+      "cross-env": "^7.0.2",
+      "nodemon": "^2.0.4"
+    }
+  }
+  

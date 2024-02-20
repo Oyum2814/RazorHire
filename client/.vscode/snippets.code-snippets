@@ -1,0 +1,74 @@
+{
+  "React Functional Component": {
+    "prefix": "rfc",
+    "body": [
+      "import React from \"react\"",
+      "import style from \"./${1:name}.module.scss\"",
+      "",
+      "import clsx from \"clsx\"",
+      "",
+      "export default function ${1:name} ()  {",
+      "  return (",
+      "    <div className={style.wrapper}>",
+      "      $2",
+      "    </div>",
+      "  )",
+      "};",
+      "",
+      ""
+    ],
+    "description": "React Functional Component"
+  },
+  "Use React Functional Component": {
+    "prefix": "use",
+    "body": [
+      "import { useState, useEffect } from \"react\";",
+      "import { stateUpdater } from \"utils/helper\";",
+      "export default function ${1:name} ()  {",
+      "  return ()",
+      "};",
+      "",
+      ""
+    ],
+    "description": "React Functional Component"
+  },
+  "Folder Index": {
+    "prefix": "ind",
+    "body": ["export * from \"./${1:name}\"", "export {default} from \"./${1:name}\""],
+    "description": "Folder Index File"
+  },
+
+  "SCSS Boilerplate": {
+    "prefix": "scss",
+    "body": ["@import \"~utils/vars\";", "\n", ".wrapper{}"],
+    "description": "Boilerplate for scss"
+  },
+  "Class Name": {
+    "prefix": "c",
+    "body": ["<div className={style.${1:name}}>$2</div>"],
+    "description": "Boilerplate for Class Name"
+  },
+  "Class Name": {
+    "prefix": "cl",
+    "body": ["<div className={clsx('${1:name}')}>$2</div>"],
+    "description": "Boilerplate for Class Name"
+  },
+  "Class Name": {
+    "prefix": "cla",
+    "body": ["className={clsx('${1:name}')}"],
+    "description": "Boilerplate for Class Name"
+  },
+
+  "Hook": {
+    "prefix": "rhc",
+    "body": [
+      "import {useState} from \"react\";",
+      "",
+      "export function use${1:name} ()  {",
+      "const [state, setState] = useState({})",
+      "",
+      "return {state}",
+      "};"
+    ]
+  }
+}

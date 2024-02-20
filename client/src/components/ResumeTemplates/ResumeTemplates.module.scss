@@ -1,0 +1,19 @@
+.wrapper{
+    min-height: 80vh;
+   
+    .templates{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 10px;
+    } 
+    .template{
+        cursor: pointer;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 16px;
+        border-radius: 9px;
+    }
+    .template:hover{
+        background:rgb(222, 222, 222);
+    }
+}
