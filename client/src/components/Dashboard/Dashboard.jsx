@@ -34,7 +34,11 @@ export default function Dashboard() {
         <h2>Dashboard Page</h2>
         <div className={clsx(style.templates, "withPadding")}>
           <a
-            className={clsx(style.template, "withPadding")}
+            className={clsx(
+              style.template,
+              "withPadding",
+              "text-md md:text-2xl"
+            )}
             href={"/resume/new"}
           >
             Create new Resume

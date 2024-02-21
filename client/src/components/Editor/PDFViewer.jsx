@@ -83,7 +83,7 @@ const PDFViewer = ({
             ></canvas>
         </div> */}
         <div
-          className={`scale-[50%] md:scale-[50%] xl:scale-[75%] ${
+          className={`scale-[50%]  xl:scale-[75%] ${
             loading ? "" : "shadow-xl border-[1px]"
           } `}
         >
