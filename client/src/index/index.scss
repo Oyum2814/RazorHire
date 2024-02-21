@@ -33,3 +33,9 @@ button {
 .withPadding {
   padding-inline: $inlinePadding;
 }
+
+@media screen and (max-width: 1000px) {
+  .withPadding {
+    padding-inline: 2em;
+  }
+}

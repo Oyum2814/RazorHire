@@ -1,7 +1,5 @@
 @import "~utils/vars";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 .wrapper {
   display: flex;
   align-items: center;
@@ -40,11 +38,78 @@
     }
   }
 
+  nav.desktop {
+    margin-left: auto;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  button {
+    background-color: $primaryColor !important;
+    color: white;
+    border-radius: 20px;
+    height: 40px;
+    width: 10em;
+  }
 }
-.btn {
-  height: 40px;
-  background-color: $primaryColor;
-  color: white;
-  border-radius: 20px;
-  padding-inline: 2em;
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    position: relative;
+    nav.desktop {
+      display: none;
+    }
+
+    .mobile {
+      display: block;
+
+      .dropdown {
+        height: 0;
+        overflow: hidden;
+        transition: all 0.2s;
+
+        top: $navbarHeight;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        background-color: $secondaryColor;
+        color: white;
+
+        ol {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          list-style-type: none;
+          padding-left: 0;
+
+          li {
+            margin-bottom: 1em;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+
+            .icon {
+              display: inline-block;
+              position: relative;
+              top: 0.2em;
+              margin-left: 0.3em;
+            }
+          }
+
+          li.locked {
+            pointer-events: none;
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .dropdown.open {
+        height: 6em;
+        overflow: auto;
+      }
+    }
+  }
 }

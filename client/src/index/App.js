@@ -37,7 +37,7 @@ function AppWrapper() {
           <AppRouter />
         </div>
 
-        <Footer />
+        {/* <Footer /> */}
       </AppContextProvider>
     </>
   );
