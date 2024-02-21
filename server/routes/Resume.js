@@ -247,4 +247,33 @@ router.get("/:id", ensureAuth, async (req, res) => {
   }
 });
 
+router.get("/name/:resumeId", async (req, res) => {
+  const { resumeId } = req.params;
+  try {
+    const user = await User.findOne({ "MyProjects.Content": resumeId });
+
+    // If user not found or MyProjects not found, return error
+    if (!user || !user.MyProjects) {
+      return res.status(404).json({ error: "Resume not found" });
+    }
+
+    // Find the project containing the given resumeId
+    const project = user.MyProjects.find(
+      (project) => project.Content.toString() === resumeId
+    );
+
+    // If project not found, return error
+    if (!project) {
+      return res.status(404).json({ error: "Resume not found" });
+    }
+
+    // If project found, return the resume name
+    const resumeName = project.Title;
+    return res.status(200).json({ resumeName });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
 module.exports = router;
