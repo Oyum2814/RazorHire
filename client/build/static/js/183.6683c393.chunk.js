@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkrazor_hire=self.webpackChunkrazor_hire||[]).push([[183],{3183:(r,e,a)=>{a.r(e),a.d(e,{default:()=>s});a(2791);const h={wrapper:"Login_wrapper__zYzT6"};var i=a(3733),n=a(184);function s(){return(0,n.jsxs)("div",{className:(0,i.Z)(h.wrapper,"withPadding"),children:[(0,n.jsx)("h2",{children:"Login Page"}),(0,n.jsx)("a",{href:"http://localhost:3001/auth/google",children:"Login Using Google"})]})}}}]);
+//# sourceMappingURL=183.6683c393.chunk.js.map
