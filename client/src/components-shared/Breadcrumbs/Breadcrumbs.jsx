@@ -21,7 +21,7 @@ const Breadcrumbs = ({ template, resume, resumeId }) => {
   }, [resumeId]);
   return (
     <nav
-      className={`flex z-20 bg-[#6a2c70] text-white ${
+      className={`flex z-40 bg-[#6a2c70] text-white ${
         resume ? "w-full fixed top-16 md:w-[50%]  " : " -top-5"
       } py-2 px-4  
         absolute ${
@@ -29,11 +29,11 @@ const Breadcrumbs = ({ template, resume, resumeId }) => {
         }`}
       aria-label="Breadcrumb"
     >
-      <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
-        <li className="inline-flex items-center">
+      <ul className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+        <li className=" list-none inline-flex items-center">
           <a
             href="/dashboard"
-            className="inline-flex items-center text-sm font-medium  hover:text-blue-600 dark: dark:hover:text-blue-600"
+            className="inline-flex text-white items-center text-sm font-medium  hover:text-blue-600 dark: dark:hover:text-blue-600"
           >
             <svg
               className="w-3 h-3 me-2.5"
@@ -73,7 +73,7 @@ const Breadcrumbs = ({ template, resume, resumeId }) => {
         )}
         {resume && (
           <>
-            <li>
+            <li className="list-none">
               <div className="flex items-center">
                 <svg
                   className="rtl:rotate-180 w-3 h-3  mx-1"
@@ -92,7 +92,7 @@ const Breadcrumbs = ({ template, resume, resumeId }) => {
                 </svg>
                 <a
                   href="/dashboard"
-                  className="ms-1 text-sm font-medium  hover:text-blue-600 md:ms-2 dark: dark:hover:text-blue-600"
+                  className="ms-1 text-white text-sm font-medium  hover:text-blue-600 md:ms-2 dark: dark:hover:text-blue-600"
                 >
                   Templates
                 </a>
@@ -122,7 +122,7 @@ const Breadcrumbs = ({ template, resume, resumeId }) => {
             </li>
           </>
         )}
-      </ol>
+      </ul>
     </nav>
   );
 };
