@@ -9,7 +9,13 @@ const MongoStore = require("connect-mongo")(session); // Notice the function cal
 const connectDB = require("./config/db");
 const cors = require("cors");
 // Load config
-dotenv.config({ path: "./config/config.env" });
+if (process.env.NODE_ENV === "development") {
+  dotenv.config({ path: "./config/config_dev.env" });
+}
+if (process.env.NODE_ENV === "production") {
+  dotenv.config({ path: "./config/config_prod.env" });
+}
+
 
 // Passport config
 require("./config/passport")(passport);
@@ -37,7 +43,7 @@ if (process.env.NODE_ENV === "development") {
 // Sessions
 app.use(
   session({
-    secret: "CCC-RazorHire",
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
     store: new MongoStore({ mongooseConnection: mongoose.connection }),
