@@ -13,13 +13,13 @@ const Resume = ({ resumeName }) => {
   const [skillInput, setSkillInput] = useState();
 
   const [info, setInfo] = useState({
-    firstName: "John",
+    firstName: "",
     middleName: "",
-    lastName: "Doe",
-    designation: "Role",
-    address: "Your Address",
-    phone: "your phone number",
-    summary: "Summary ...",
+    lastName: "",
+    designation: "",
+    address: "",
+    phone: "",
+    summary: "",
     story: "",
     site: "",
   });

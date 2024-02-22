@@ -16,7 +16,6 @@ if (process.env.NODE_ENV === "production") {
   dotenv.config({ path: "./config/config_prod.env" });
 }
 
-
 // Passport config
 require("./config/passport")(passport);
 

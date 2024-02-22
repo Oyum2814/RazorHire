@@ -11,7 +11,7 @@ router.get(
 
 // @desc    Google auth callback
 // @route   GET /auth/google/callback
-router.get(
+router.post(
   "/google/callback",
   passport.authenticate("google", { failureRedirect: "/" }),
   (req, res) => {
