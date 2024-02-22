@@ -16,7 +16,6 @@ if (process.env.NODE_ENV === "production") {
   dotenv.config({ path: "./config/config_prod.env" });
 }
 
-
 // Passport config
 require("./config/passport")(passport);
 
@@ -24,12 +23,7 @@ connectDB();
 
 const allowedOrigin = "http://localhost:3000";
 const app = express();
-app.use(
-  cors({
-    origin: allowedOrigin,
-    credentials: true,
-  })
-);
+app.use(cors());
 
 // Body parser
 app.use(express.urlencoded({ extended: false }));
@@ -70,7 +64,4 @@ app.use("/resume", require("./routes/Resume"));
 
 const PORT = process.env.PORT || 3000;
 
-app.listen(
-  PORT,
-  console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
-);
+app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`));
