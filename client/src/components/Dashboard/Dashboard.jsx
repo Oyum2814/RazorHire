@@ -11,7 +11,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchResumes = async () => {
       try {
-        const response = await axios.get("resume/myProjects", { mode: "cors" });
+        const response = await axios.get("resume/myProjects");
         console.log({ response });
         setResumes(response.data);
         console.log(response.data);
