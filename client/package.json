@@ -15,6 +15,7 @@
     "env-cmd": "^10.1.0",
     "flowbite-react": "^0.7.2",
     "hamburger-react": "^2.5.0",
+    "http-proxy-middleware": "^2.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-error-boundary": "^4.0.12",
@@ -55,5 +56,6 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.4.1"
-  }
+  },
+  "proxy": "https://api.razorhire.ai"
 }
