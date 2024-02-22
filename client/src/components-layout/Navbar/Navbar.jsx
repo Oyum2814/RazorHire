@@ -10,6 +10,8 @@ import { useSelector } from "react-redux";
 
 import Hamburger from "hamburger-react";
 
+import config from "config/config";
+
 export default function Navbar() {
   const user = useSelector((state) => state.user.user);
   const [showAccountMenu, setShowAccountMenu] = useState(false);
@@ -33,16 +35,11 @@ export default function Navbar() {
           }}
         >
           <div>
-            <img
-              src={user?.user.image}
-              className="h-10 w-10 rounded-full flex-shrink-0"
-            />
+            <img src={user?.user.image} className="h-10 w-10 rounded-full flex-shrink-0" />
           </div>
           <BsChevronDown
             color="black"
-            className={`transition hover:scale-125 ${
-              showAccountMenu ? "rotate-180" : "rotate-0"
-            }`}
+            className={`transition hover:scale-125 ${showAccountMenu ? "rotate-180" : "rotate-0"}`}
           />
           <AccountMenu visible={showAccountMenu} user={user} />
         </button>
@@ -51,18 +48,8 @@ export default function Navbar() {
       {!user && (
         <div className="flex  items-center ml-auto">
           <div className={clsx(style.mobile, "ml-auto mr-10")}>
-            <Hamburger
-              color="#2846bd"
-              toggled={isOpenHam}
-              toggle={setOpenHam}
-            />
-            <div
-              className={clsx(
-                style.dropdown,
-                "withPadding",
-                isOpenHam && style.open
-              )}
-            >
+            <Hamburger color="#2846bd" toggled={isOpenHam} toggle={setOpenHam} />
+            <div className={clsx(style.dropdown, "withPadding", isOpenHam && style.open)}>
               <ol>
                 <li>Free Templates</li>
                 <li className={style.locked}>
@@ -87,7 +74,7 @@ export default function Navbar() {
             </ol>
           </nav>
 
-          <a href="https://api.razorhire.ai/auth/google">
+          <a href={`${config.apiBaseUrl}/auth/google`}>
             <button>Log In/Sign Up</button>
           </a>
         </div>

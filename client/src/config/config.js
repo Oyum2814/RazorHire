@@ -1,14 +1,15 @@
 const env = process.env.REACT_APP_ENV;
 
 const apiBaseUrlMap = {
-  dev: "dev-url",
-  prod: "prod-url",
+  dev: "http://localhost:3001",
+  prod: "https://api.razorhire.ai",
 };
 
 const config = {
   env,
   apiBaseUrl: apiBaseUrlMap[env],
-  // ...   Add all other configs here
 };
+
+console.log({ config });
 
 export default config;
