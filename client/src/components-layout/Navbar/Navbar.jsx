@@ -2,7 +2,6 @@ import { useState, useCallback } from "react";
 import clsx from "clsx";
 import style from "./Navbar.module.scss";
 import Logo from "components-shared/Logo";
-
 import AccountMenu from "./AccountMenu";
 import LockImg from "assets/images/lock-icon.svg";
 
@@ -20,12 +19,11 @@ export default function Navbar() {
   const toggleAccountMenu = useCallback(() => {
     setShowAccountMenu((current) => !current);
   }, []);
-
   return (
     <div className={clsx(style.wrapper, "withPadding")}>
-      <span className={style.logo}>
+      <a href="/" className={style.logo}>
         <Logo />
-      </span>
+      </a>
 
       {user && (
         <button
@@ -35,21 +33,36 @@ export default function Navbar() {
           }}
         >
           <div>
-            <img src={user?.user.image} className="h-10 w-10 rounded-full flex-shrink-0" />
+            <img
+              src={user?.user.image}
+              className="h-10 w-10 rounded-full flex-shrink-0"
+            />
           </div>
           <BsChevronDown
             color="black"
-            className={`transition hover:scale-125 ${showAccountMenu ? "rotate-180" : "rotate-0"}`}
+            className={`transition hover:scale-125 ${
+              showAccountMenu ? "rotate-180" : "rotate-0"
+            }`}
           />
           <AccountMenu visible={showAccountMenu} user={user} />
         </button>
       )}
 
       {!user && (
-        <div className="flex items-center ml-auto">
+        <div className="flex  items-center ml-auto">
           <div className={clsx(style.mobile, "ml-auto mr-10")}>
-            <Hamburger color="#2846bd" toggled={isOpenHam} toggle={setOpenHam} />
-            <div className={clsx(style.dropdown, "withPadding", isOpenHam && style.open)}>
+            <Hamburger
+              color="#2846bd"
+              toggled={isOpenHam}
+              toggle={setOpenHam}
+            />
+            <div
+              className={clsx(
+                style.dropdown,
+                "withPadding",
+                isOpenHam && style.open
+              )}
+            >
               <ol>
                 <li>Free Templates</li>
                 <li className={style.locked}>
@@ -74,7 +87,7 @@ export default function Navbar() {
             </ol>
           </nav>
 
-          <a href="http://localhost:3001/auth/google">
+          <a href="https://api.razorhire.ai/auth/google">
             <button>Log In/Sign Up</button>
           </a>
         </div>

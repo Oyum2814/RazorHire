@@ -3,13 +3,12 @@ import { BsPersonFill } from "react-icons/bs";
 
 const AccountMenu = ({ visible, user }) => {
   if (!visible) return null;
-  console.log(process.env.HOST);
   return (
-    <div className="border-[0.5px] rounded-md bg-white text-black w-56 absolute top-14 right-0 py-5 m-4 flex-col border-1 border-gray-800 flex z-50">
+    <div className="border-1 rounded-md bg-white text-black w-56 absolute top-14 right-0 py-5 m-4 flex-col border-1 border-gray-800 flex z-50">
       <div className="flex flex-col gap-3">
         <div className="px-3 group/item flex flex-row items-center w-full">
           {user?.image ? (
-            <div className="w-12 h-12 rounded-full border border-[2px] overflow-hidden bg-white">
+            <div className="w-12 h-12 rounded-full border-[2px] overflow-hidden bg-white">
               <img
                 width="40"
                 height="40"

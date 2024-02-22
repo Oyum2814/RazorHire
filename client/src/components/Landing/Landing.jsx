@@ -43,9 +43,12 @@ export default function Hero() {
 
         <div className={style.clientelle}>
           <div className={style.caption}>
-            Secure your dream tech job swiftly with our specialized fresher resume builder
+            Secure your dream tech job swiftly with our specialized fresher
+            resume builder
           </div>
-          <div className={style.subCaption}>Get hired in top companies like</div>
+          <div className={style.subCaption}>
+            Get hired in top companies like
+          </div>
           <img src={CompanyBannerImg} alt="client list" />
         </div>
       </section>
@@ -55,8 +58,8 @@ export default function Hero() {
           <p>Features designed to help you win your dream job</p>
         </div>
         <div className={style.features}>
-          {FEATURES.map((feat) => (
-            <article>
+          {FEATURES.map((feat, index) => (
+            <article key={index}>
               <div className={style.image}>
                 <img src={feat.icon} alt="icon" />
               </div>
@@ -77,8 +80,8 @@ export default function Hero() {
           <p>Premimum Resume Templates</p>
         </div>
         <div className={style.premiums}>
-          {PREMIUM.map((prem) => (
-            <article>
+          {PREMIUM.map((prem, index) => (
+            <article key={index}>
               <div className={style.image}>
                 <img src={prem.templateImg} alt="resume template" />
               </div>

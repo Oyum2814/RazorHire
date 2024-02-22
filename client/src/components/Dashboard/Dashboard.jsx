@@ -43,8 +43,9 @@ export default function Dashboard() {
           >
             Create new Resume
           </a>
-          {resumes?.map((resume) => (
+          {resumes?.map((resume, index) => (
             <div
+              key={index}
               className={clsx(style.template, "withPadding")}
               onClick={() => {
                 navigate(`/resume/${resume?.Content}`);

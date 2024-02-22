@@ -3,6 +3,7 @@
 .wrapper {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: $navbarHeight;
   background-color: transparent;
