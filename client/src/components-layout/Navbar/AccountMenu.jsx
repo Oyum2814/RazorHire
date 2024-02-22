@@ -26,7 +26,7 @@ const AccountMenu = ({ visible, user }) => {
         </div>
         <hr className="bg-gray-600 border-0 h-[0.5px] my-2" />
         <a
-          href={"http://localhost:3001/auth/logout"}
+          href={"https://api.razirhire.ai/auth/logout"}
           className="text-center cursor-pointer px-4 py-2 bg-white text-[#6a2c70] font-extralight rounded-[10px]"
         >
           Sign Out
