@@ -9,7 +9,7 @@ export default function Editor() {
   const { resumeId } = useParams();
   return (
     <div className={clsx(style.wrapper)}>
-      <Breadcrumbs resume resumeId={resumeId} />
+      {/* <Breadcrumbs resume resumeId={resumeId} /> */}
       <Resume resumeName={"Template3"} />
     </div>
   );
