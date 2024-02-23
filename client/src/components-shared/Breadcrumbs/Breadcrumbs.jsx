@@ -48,7 +48,7 @@ const Breadcrumbs = ({ template, resume, resumeId }) => {
           </a>
         </li>
         {template && (
-          <li aria-current="page">
+          <li aria-current="page" className="list-none">
             <div className="flex items-center">
               <svg
                 className="rtl:rotate-180 w-3 h-3 mx-1"
@@ -98,7 +98,7 @@ const Breadcrumbs = ({ template, resume, resumeId }) => {
                 </a>
               </div>
             </li>
-            <li aria-current="page">
+            <li aria-current="page" className="list-none">
               <div className="flex items-center">
                 <svg
                   className="rtl:rotate-180 w-3 h-3  mx-1"
@@ -116,7 +116,7 @@ const Breadcrumbs = ({ template, resume, resumeId }) => {
                   />
                 </svg>
                 <span className="ms-1 text-sm font-medium text-white md:ms-2 dark:">
-                  {resumeName}
+                  {loading ? "Loading" : resumeName}
                 </span>
               </div>
             </li>

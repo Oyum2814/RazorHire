@@ -175,12 +175,24 @@ a {
 .footer {
   padding: 3rem 0;
 }
-
+.react-pdf__Page__canvas {
+  
+  margin: 0 auto;
+  width: 80% !important;
+  height: auto !important;
+  overflow: hidden !important;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  border: 0.5px black solid;
+}
 /* media queries */
 @media screen and (min-width: 768px) {
   .section-two .section-items {
     grid-template-columns: repeat(2, 1fr);
   }
+  .react-pdf__Page__canvas {
+    width: 100% !important;
+    height: auto !important;
+}
 }
 
 @media screen and (min-width: 992px) {

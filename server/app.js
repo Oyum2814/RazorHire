@@ -23,7 +23,11 @@ connectDB();
 
 const allowedOrigin = "http://localhost:3000";
 const app = express();
-app.use(cors());
+const corsConfig = {
+  credentials: true,
+  origin: true,
+};
+app.use(cors(corsConfig));
 
 // Body parser
 app.use(express.urlencoded({ extended: false }));
@@ -64,11 +68,11 @@ app.use("/resume", require("./routes/Resume"));
 
 const PORT = process.env.PORT || 3000;
 
-<<<<<<< HEAD
+// <<<<<<< HEAD
 app.listen(
   PORT,
   console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
 );
-=======
-app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`));
->>>>>>> f5113f4d6a49bca5e49e16e9fc2bc72e8942db69
+// =======
+// app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`));
+// >>>>>>> f5113f4d6a49bca5e49e16e9fc2bc72e8942db69

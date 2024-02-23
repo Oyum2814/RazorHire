@@ -69,7 +69,7 @@ const PDFViewer = ({
 
   return (
     <div
-      className="pdf-viewer h-auto md:h-screen md:overflow-y-scroll overflow-x-hidden  w-[100%] md:w-[50%]  
+      className="pdf-viewer h-auto md:h-screen overflow-hidden md:overflow-y-scroll overflow-x-hidden  w-[100%] md:w-[50%]  
     flex flex-row md:flex-col justify-center items-center relative"
     >
       <div className="pdf-layout w-full h-full  flex flex-col justify-center  items-center">
@@ -83,12 +83,13 @@ const PDFViewer = ({
             ></canvas>
         </div> */}
         <div
-          className={`h-full  scale-50 ${
-            loading ? "" : "shadow-2xl border-[1px]"
+          className={`h-full mt-64 md:mt-0 w-screen  md:w-auto ${
+            loading ? "" : "border-[1px]"
           } `}
         >
           <Doc
             file={pdfUrl}
+            style={{ width: "100%", height: "auto" }}
             loading={() => {
               setLoading(true);
               return (
