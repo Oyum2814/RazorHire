@@ -9,7 +9,7 @@ import { BsChevronDown } from "react-icons/bs";
 import { useSelector } from "react-redux";
 
 import Hamburger from "hamburger-react";
-
+import { FaLock } from "react-icons/fa6";
 import config from "config/config";
 
 export default function Navbar() {
@@ -74,9 +74,14 @@ export default function Navbar() {
             </ol>
           </nav>
 
-          <a href={`${config.apiBaseUrl}/auth/google`}>
-            <button>Log In/Sign Up</button>
-          </a>
+          {/* <a href={`${config.apiBaseUrl}/auth/google`}> */}
+          <button>
+            Log In/Sign Up{" "}
+            <span style={{ marginLeft: "1em" }}>
+              <FaLock size={15} />
+            </span>
+          </button>
+          {/* </a> */}
         </div>
       )}
     </div>

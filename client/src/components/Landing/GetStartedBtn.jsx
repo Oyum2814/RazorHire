@@ -1,15 +1,16 @@
-import React from "react";
 import style from "./GetStartedBtn.module.scss";
+import React from "react";
+import { FaLock } from "react-icons/fa6";
 
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 export default function GetStartedBtn() {
   return (
-    <a href={"/dashboard"} className={style.wrapper}>
+    <button className={style.wrapper}>
       Get Started for Free
-      <span>
-        <MdKeyboardArrowRight size={25} />
+      <span style={{ marginLeft: "1em" }}>
+        <FaLock size={15} />
       </span>
-    </a>
+    </button>
   );
 }

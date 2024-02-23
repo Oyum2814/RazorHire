@@ -52,7 +52,17 @@
     color: white;
     border-radius: 20px;
     height: 40px;
-    width: 10em;
+    width: 12em;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    // padding-inline: 1em;
+
+    svg {
+      position: relative;
+      top: 0.15em;
+    }
   }
 }
 
